@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group
+        android:id="@+id/items_nav"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_inicio"
+            android:icon="@drawable/user"
+            android:title="Información Personal"/>
+        <item
+            android:id="@+id/nav_inicio2"
+            android:icon="@drawable/ic_remove_red_eye_black_24dp"
+            android:title="Conócenos"/>
+        <item
+            android:id="@+id/nav_inicio3"
+            android:icon="@drawable/ic_catalogo"
+            android:title="Productos"/>
+        <item
+            android:id="@+id/nav_inicio4"
+            android:icon="@drawable/ic_phone"
+            android:title="Contáctanos"/>
+        <item
+            android:id="@+id/nav_inicio5"
+            android:icon="@drawable/ic_editar"
+            android:title="Modificar Datos"/>
+        <!--<item
+            android:id="@+id/nav_inicio"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Inicio"/>
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/menu_home"
+            android:visible="false" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/menu_gallery"
+            android:visible="false" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/menu_slideshow"
+            android:visible="false" />
+        <item
+            android:id="@+id/nav_tools"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/menu_tools"
+            android:visible="false" />
+        <item
+            android:id="@+id/listaCategoria"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Lista Categorías"
+            android:visible="false" />
+        <item
+            android:id="@+id/listaMarca"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Lista Marcas"
+            android:visible="false" />
+        <item
+            android:id="@+id/listaUnidad"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Lista Unidades"
+            android:visible="false" />
+        <item
+            android:id="@+id/listaProducto"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Lista Productos"
+            android:visible="false" />-->
+    </group>
+
+</menu>

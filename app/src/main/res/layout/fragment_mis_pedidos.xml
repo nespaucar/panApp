@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".proceso.MisPedidosFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/menumispedidos"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:backgroundTint="@color/design_default_color_primary"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:id="@+id/btnRegresarMisPedidos"
+                android:layout_height="match_parent"
+                android:layout_weight=".10"
+                android:textSize="13dp"
+                android:drawableBottom="@drawable/ic_arrow_back_black_24dp"
+                android:backgroundTint="#FB574A"
+                android:textAlignment="center"
+                android:paddingStart="3dp"/>
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:layout_width="0dp"
+                android:id="@+id/txtEstadoMisPedidos"
+                android:layout_height="match_parent"
+                android:layout_weight=".30"
+                android:textSize="11dp"
+                android:entries="@array/arraySpinnerEstado"
+                android:paddingEnd="3dp">
+            </androidx.appcompat.widget.AppCompatSpinner>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="0dp"
+                android:id="@+id/txtFechaMisPedidos"
+                android:layout_height="match_parent"
+                android:layout_weight=".30"
+                android:textSize="13dp"
+                android:inputType="date"
+                android:hint="FECHA"
+                android:drawableRight="@drawable/ic_fecha"
+                android:backgroundTint="@color/design_default_color_primary">
+            </androidx.appcompat.widget.AppCompatEditText>
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:layout_width="0dp"
+                android:id="@+id/cbxTodos"
+                android:layout_height="match_parent"
+                android:layout_weight=".30"
+                android:text="TODOS"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textAlignment="center">
+            </androidx.appcompat.widget.AppCompatCheckBox>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:id="@+id/recyclerMisPedidos"
+            android:layout_below="@+id/menumispedidos">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </RelativeLayout>
+
+</RelativeLayout>

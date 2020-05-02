@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/idcabecera"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:text="LOGUEATE"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:fontFamily="serif-monospace"
+            tools:ignore="MissingConstraints"
+            android:textColor="@color/design_default_color_primary_dark"
+            android:layout_marginTop="7dp"
+            android:layout_alignParentTop="true"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/nombrecabecera"
+            android:layout_width="match_parent"
+            android:layout_height="17dp"
+            android:textStyle="bold"
+            android:textAlignment="textEnd"
+            android:textSize="11dp"
+            android:fontFamily="serif-monospace"
+            tools:ignore="MissingConstraints"
+            android:textColor="@android:color/holo_red_light"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="8dp"
+            android:layout_below="@+id/idcabecera"/>
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/hide"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:inputType="text"
+            android:visibility="invisible" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnEditarUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/ic_user_blue"
+            android:backgroundTint="@color/colorNaranjaBajo"/>
+        <FrameLayout
+            android:id="@+id/contenedordinamico"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/nombrecabecera"></FrameLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight=".40"
+            android:layout_gravity="center"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/fechaProgramadaMiPedido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="10/10/2019"
+                android:textColor="@android:color/background_dark"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/turnoMiPedido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="8dp"
+                android:text="Hace 1 semana"
+                android:textColor="@android:color/primary_text_light"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/estadoMiPedido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="8dp"
+                android:text="PENDIENTE"
+                android:textColor="@android:color/holo_green_dark"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/totalMiPedido"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_weight=".3"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="s/. 20.00"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:textColor="@android:color/holo_blue_dark"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnVerMiPedido"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight=".10"
+            android:drawableBottom="@drawable/ic_ojo"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:backgroundTint="@android:color/holo_green_light"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnEditarMiPedido"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight=".10"
+            android:drawableBottom="@drawable/ic_lapiz"
+            android:layout_gravity="center"
+            android:backgroundTint="@android:color/holo_orange_dark"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnEliminarMiPedido"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight=".10"
+            android:drawableBottom="@drawable/ic_tacho"
+            android:layout_gravity="center"
+            android:backgroundTint="@android:color/holo_red_dark"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/design_default_color_primary_dark"
+        android:layout_below="@+id/imgProducto"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

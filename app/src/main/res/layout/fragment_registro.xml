@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".actividad.RegistroFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_weight=".25"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:text="Nombres "
+                android:textSize="12dp"
+                android:drawableRight="@drawable/ic_user_blue"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textAlignment="textEnd"
+                android:textColor="#0400FF"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="0dp"
+                android:layout_weight=".75"
+                android:id="@+id/c_nombres"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:inputType="textCapCharacters"
+                android:digits="ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyzáéíóúÁÉÍÓÚ "
+                android:textSize="12dp"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!--
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".25"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:text="Ap. Materno "
+                android:textSize="12dp"
+                android:drawableRight="@drawable/ic_user_blue"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textAlignment="textEnd"
+                android:textColor="#0400FF"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_weight=".75"
+                android:id="@+id/c_apmaterno"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:inputType="text"
+                android:textSize="12dp"/>
+
+        </LinearLayout>-->
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_weight=".25"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:text="DNI "
+                android:textSize="12dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textAlignment="textEnd"
+                android:drawableRight="@drawable/ic_dni_blue"
+                android:textColor="#0400FF"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="0dp"
+                android:layout_weight=".25"
+                android:id="@+id/c_dni"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:maxLength="8"
+                android:inputType="number"
+                android:textSize="12dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_weight=".25"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:text="Nacimiento "
+                android:textSize="12dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textAlignment="textEnd"
+                android:textColor="#0400FF"
+                android:drawableRight="@drawable/ic_nacimiento_blue"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="0dp"
+                android:layout_weight=".25"
+                android:id="@+id/c_fnacimiento"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:textSize="12dp"
+                android:inputType="text"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:visibility="gone"
+                android:layout_width="0dp"
+                android:layout_weight=".25"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:text="Usuario "
+                android:textSize="12dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textAlignment="textEnd"
+                android:drawableRight="@drawable/ic_user_blue2"
+                android:textColor="#0400FF"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:visibility="gone"
+                android:layout_width="0dp"
+                android:layout_weight=".25"
+                android:id="@+id/c_usuario"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:inputType="text"
+                android:maxLength="10"
+                android:textSize="12dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:text="Contaseña para usuario "
+                android:textSize="12dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textAlignment="textEnd"
+                android:textColor="#0400FF"
+                android:drawableRight="@drawable/ic_remove_red_eye_black_24dp"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:id="@+id/c_clave"
+                android:maxLength="10"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:textSize="12dp"
+                android:inputType="textPassword"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_weight=".25"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:text="Dirección "
+                android:textSize="12dp"
+                android:textAlignment="textEnd"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textColor="#0400FF"
+                android:drawableRight="@drawable/ic_ubicacion_blue"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="0dp"
+                android:layout_weight=".75"
+                android:id="@+id/c_direccion"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:inputType="text|textMultiLine"
+                android:textSize="12dp"
+                android:layout_gravity="center"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_weight=".25"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:text="Referencia "
+                android:textSize="12dp"
+                android:drawableRight="@drawable/ic_ubicacion_blue"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textAlignment="textEnd"
+                android:textColor="#0400FF"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="0dp"
+                android:layout_weight=".75"
+                android:id="@+id/c_referencia"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:inputType="text"
+                android:textSize="12dp"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_weight=".25"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:text="Celular "
+                android:textSize="12dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textAlignment="textEnd"
+                android:textColor="#0400FF"
+                android:drawableRight="@drawable/ic_phone_blue"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="0dp"
+                android:layout_weight=".25"
+                android:id="@+id/c_celular"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:inputType="number"
+                android:textSize="12dp"
+                android:maxLength="9"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_weight=".20"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:text="Sexo "
+                android:textSize="12dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textAlignment="textEnd"
+                android:textColor="#0400FF"
+                android:drawableRight="@drawable/ic_genero_azul"/>
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:layout_width="0dp"
+                android:layout_weight=".30"
+                android:id="@+id/c_sexo"
+                android:layout_height="match_parent"
+                android:inputType="text"
+                android:textSize="12dp"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_weight=".25"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:text="Correo "
+                android:textSize="12dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textAlignment="textEnd"
+                android:textColor="#0400FF"
+                android:drawableRight="@drawable/ic_mail_blue"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="0dp"
+                android:layout_weight=".75"
+                android:id="@+id/c_correo"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:inputType="textEmailAddress"
+                android:textSize="12dp"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_registrarse"
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="match_parent"
+                android:text="REGISTRARSE"
+                android:textSize="10dp"
+                android:enabled="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:drawableLeft="@drawable/ic_save_black_24dp"
+                android:textColor="#ffff"
+                android:backgroundTint="#48A400"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_volverse"
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="match_parent"
+                android:text="VOLVER AL LOGIN"
+                android:textSize="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:drawableLeft="@drawable/ic_arrow_back_black_24dp"
+                android:textColor="#ffff"
+                android:backgroundTint="#FB574A"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/categoria_id"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:visibility="invisible"/>
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/latitud"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:visibility="invisible"/>
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/longitud"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:visibility="invisible"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </ScrollView>
+
+</FrameLayout>

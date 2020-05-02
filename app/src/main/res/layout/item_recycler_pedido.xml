@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical">
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnEliminarDetallePedido"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_weight=".11"
+        android:drawableBottom="@drawable/ic_menos"
+        android:layout_gravity="center"
+        android:backgroundTint="@android:color/holo_red_dark"/>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="0.47">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/nombreProductoPedido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="11sp"
+            android:textStyle="bold|italic"
+            android:textColor="#BE7000"
+            android:text="Nombre"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/precioProductoPedido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:textSize="10sp"
+            android:textColor="#7F7760"
+            android:text="Descripción"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/cantidadProductoPedido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"
+            android:textColor="#7F7760"
+            android:text="Descripción"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/subtotalProductoPedido"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_weight=".2"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textSize="12dp"
+        android:text="100"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:textColor="@android:color/background_dark"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAumentarCantidadDetallePedido"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_weight=".11"
+        android:drawableBottom="@drawable/ic_subir"
+        android:layout_gravity="center"
+        android:backgroundTint="@android:color/holo_blue_dark"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDisminuirCantidadDetallePedido"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_weight=".11"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:drawableBottom="@drawable/ic_bajar"
+        android:layout_gravity="center" />
+</androidx.appcompat.widget.LinearLayoutCompat>
+
+<androidx.appcompat.widget.AppCompatTextView
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="@color/design_default_color_primary_dark"
+    android:layout_below="@+id/imgProducto"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
