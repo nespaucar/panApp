@@ -3,79 +3,84 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".actividad.actividadCategoria">
 
-    <LinearLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <LinearLayout
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
-                android:layout_height="50dp">
+                android:layout_height="50sp">
 
-                <TextView
-                    android:layout_width="100dp"
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:inputType="text"
                     android:text="@string/ingrese_codigo"
-                    android:textSize="15dp"
+                    android:textSize="15sp"
                     android:fontFamily="sans-serif-condensed-medium"
-                    android:textAlignment="textEnd"/>
+                    android:textAlignment="textEnd"
+                    android:gravity="end" />
 
-                <EditText
+                <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:id="@+id/categoria_codigo"
                     android:layout_height="match_parent"
                     android:textAlignment="center"
-                    android:inputType="text"/>
+                    android:inputType="text"
+                    android:gravity="center_horizontal" />
 
-            </LinearLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
-            <LinearLayout
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
-                android:layout_height="50dp">
+                android:layout_height="50sp">
 
-                <TextView
-                    android:layout_width="100dp"
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="100sp"
                     android:layout_height="wrap_content"
                     android:inputType="text"
                     android:text="@string/ingrese_nombre"
-                    android:textSize="15dp"
+                    android:textSize="15sp"
                     android:fontFamily="sans-serif-condensed-medium"
-                    android:textAlignment="textEnd"/>
+                    android:textAlignment="textEnd"
+                    android:gravity="end" />
 
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     android:layout_width="match_parent"
                     android:id="@+id/categoria_nombre"
                     android:layout_height="match_parent"
                     android:textAlignment="center"
-                    android:inputType="text"/>
+                    android:inputType="text"
+                    android:gravity="center_horizontal" />
 
-            </LinearLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
-            <LinearLayout
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
-                android:layout_height="50dp">
+                android:layout_height="50sp">
 
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/categoria_id"
-                    android:layout_width="200dp"
+                    android:layout_width="200sp"
                     android:layout_height="wrap_content"
                     android:inputType="text"
                     android:visibility="invisible"/>
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_registrar_categoria"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@string/registrar"
-                    android:textSize="15dp"
+                    android:textSize="15sp"
                     android:drawableLeft="@drawable/ic_menu_send"
                     android:textColor="#ffff"
-                    android:backgroundTint="#ef9a9a"/>
+                    app:backgroundTint="#ef9a9a"/>
 
-            </LinearLayout>
-        </LinearLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
 </FrameLayout>

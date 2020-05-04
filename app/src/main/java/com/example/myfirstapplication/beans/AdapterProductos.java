@@ -17,7 +17,6 @@ import com.example.myfirstapplication.R;
 import com.example.myfirstapplication.utilidades.Utilidades;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 public class AdapterProductos
         extends RecyclerView.Adapter<AdapterProductos.ViewHolderProductos>

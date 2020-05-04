@@ -606,7 +606,7 @@ public class MisPedidosFragment extends Fragment {
         spinnerTipo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if(valorestipo[position].toString().equals("UN DÍA")) {
+                if(valorestipo[position].equals("UN DÍA")) {
                     fecha2Pedido.setText(fechaPedido.getText().toString());
                 }
             }
@@ -721,7 +721,7 @@ public class MisPedidosFragment extends Fragment {
     private int compararFechasConDate(String fecha1, String fechaActual) {
         int rst = 0;
         try {
-            /**Obtenemos las fechas enviadas en el formato a comparar*/
+            //Obtenemos las fechas enviadas en el formato a comparar*/
             SimpleDateFormat formateador = new SimpleDateFormat("dd/MM/yyyy");
             Date fechaDate1 = formateador.parse(fecha1);
             Date fechaDate2 = formateador.parse(fechaActual);

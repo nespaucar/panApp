@@ -2,11 +2,9 @@ package com.example.myfirstapplication;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
-import android.app.TaskStackBuilder;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -18,7 +16,6 @@ import android.os.Build;
 import android.os.Bundle;
 
 import androidx.core.app.NotificationCompat;
-import androidx.core.app.NotificationManagerCompat;
 import androidx.fragment.app.Fragment;
 import androidx.core.view.GravityCompat;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -232,20 +229,11 @@ public class MainActivity extends AppCompatActivity
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        /*if (id == R.id.action_settings) {
-            return true;
-        }*/
-
         return super.onOptionsItemSelected(item);
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
         int id = item.getItemId();
 
         if(!item.isChecked()) {
@@ -339,7 +327,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void guardarEstadoSesion(Context context, Boolean estado, int id_usuario, String nombre_usuario, int id_pedido, String tipo) {
-        SharedPreferences preferences = context.getSharedPreferences(MainActivity.STRING_PREFERENCES, context.MODE_PRIVATE);
+        SharedPreferences preferences = context.getSharedPreferences(MainActivity.STRING_PREFERENCES, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
         editor.putBoolean(MainActivity.PRIVATE_STATE_BUTTON_SESION, estado).apply();
         editor.putInt("id_usuario", id_usuario).apply();
@@ -350,32 +338,32 @@ public class MainActivity extends AppCompatActivity
     }
 
     public boolean obtenerEstadoSesion(Context context) {
-        SharedPreferences preferences = context.getSharedPreferences(MainActivity.STRING_PREFERENCES, context.MODE_PRIVATE);
+        SharedPreferences preferences = context.getSharedPreferences(MainActivity.STRING_PREFERENCES, Context.MODE_PRIVATE);
         return preferences.getBoolean(MainActivity.PRIVATE_STATE_BUTTON_SESION, false);
     }
 
     public int obtenerIdUsuarioEstadoSesion(Context context) {
-        SharedPreferences preferences = context.getSharedPreferences(MainActivity.STRING_PREFERENCES, context.MODE_PRIVATE);
+        SharedPreferences preferences = context.getSharedPreferences(MainActivity.STRING_PREFERENCES, Context.MODE_PRIVATE);
         return preferences.getInt("id_usuario", 0);
     }
 
     public String obtenerTipoUsuarioEstadoSesion(Context context) {
-        SharedPreferences preferences = context.getSharedPreferences(MainActivity.STRING_PREFERENCES, context.MODE_PRIVATE);
+        SharedPreferences preferences = context.getSharedPreferences(MainActivity.STRING_PREFERENCES, Context.MODE_PRIVATE);
         return preferences.getString("tipo_user", "");
     }
 
     public static int obtenerIdUsuarioEstadoSesionStatic(Context context) {
-        SharedPreferences preferences = context.getSharedPreferences(MainActivity.STRING_PREFERENCES, context.MODE_PRIVATE);
+        SharedPreferences preferences = context.getSharedPreferences(MainActivity.STRING_PREFERENCES, Context.MODE_PRIVATE);
         return preferences.getInt("id_usuario", 0);
     }
 
     public String obtenerNombreUsuarioEstadoSesion(Context context) {
-        SharedPreferences preferences = context.getSharedPreferences(MainActivity.STRING_PREFERENCES, context.MODE_PRIVATE);
+        SharedPreferences preferences = context.getSharedPreferences(MainActivity.STRING_PREFERENCES, Context.MODE_PRIVATE);
         return preferences.getString("nombre_usuario", "");
     }
 
     public int obtenerIdPedidoSesion(Context context) {
-        SharedPreferences preferences = context.getSharedPreferences(MainActivity.STRING_PREFERENCES, context.MODE_PRIVATE);
+        SharedPreferences preferences = context.getSharedPreferences(MainActivity.STRING_PREFERENCES, Context.MODE_PRIVATE);
         return preferences.getInt("id_pedido", 0);
     }
 

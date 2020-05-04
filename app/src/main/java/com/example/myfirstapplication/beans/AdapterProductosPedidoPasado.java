@@ -30,7 +30,7 @@ public class AdapterProductosPedidoPasado extends RecyclerView.Adapter<AdapterPr
         holder.etiNombre.setText(listaProductos.get(position).getNombre());
         holder.etiDescripcion.setText(listaProductos.get(position).getDescripcion());
         holder.etiPrecio.setText("PRECIO: S/. " + listaProductos.get(position).getPrecio().toString());
-        holder.etiCantidad.setText(String.valueOf(listaProductos.get(position).getCantidad()) + " UNID.");
+        holder.etiCantidad.setText(listaProductos.get(position).getCantidad() + " UNID.");
         holder.etiSubtotal.setText("S/. " + listaProductos.get(position).getSubtotal().toString());
     }
 

@@ -52,7 +52,7 @@ public class actividadListaMarca extends Fragment {
         Conexion conexion = new Conexion(getContext());
         ArrayList<String> listaMarca = conexion.listaRegistros(Utilidades.TABLA_MARCA, "NO");
         idsMarca = conexion.arrayRegistros(Utilidades.TABLA_MARCA, listaMarca.size());
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1, listaMarca);
+        ArrayAdapter<String> adapter = new ArrayAdapter(getContext(), android.R.layout.simple_list_item_1, listaMarca);
         lista.setAdapter(adapter);
 
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {

@@ -21,8 +21,6 @@ import com.example.myfirstapplication.utilidades.Utilidades;
 
 public class actividadCategoria extends Fragment {
 
-    EditText campoCodigo, campoNombre;
-
     private EditText codigo, nombre, id;
     Button btn;
 

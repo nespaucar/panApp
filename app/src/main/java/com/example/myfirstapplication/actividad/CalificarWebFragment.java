@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.myfirstapplication.MainActivity;
 import com.example.myfirstapplication.R;

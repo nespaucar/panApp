@@ -930,7 +930,7 @@ public class CatalogoProductosFragment extends Fragment implements Response.List
         spinnerTipo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if(valorestipo[position].toString().equals("UN DÍA")) {
+                if(valorestipo[position].equals("UN DÍA")) {
                     fecha2Pedido.setText(fechaPedido.getText().toString());
                     fecha2Pedido.setVisibility(View.GONE);
                 } else {
@@ -950,7 +950,7 @@ public class CatalogoProductosFragment extends Fragment implements Response.List
         spinnerTurno.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if(valoresturno[position].toString().equals("TARDE")) {
+                if(valoresturno[position].equals("TARDE")) {
                     final String[] valoreshora = {"5:00 PM", "6:00 PM", "7:00 PM"};
                     spinnerHora.setAdapter(new ArrayAdapter<String>(getContext(), R.layout.spinner_item_chalalo, valoreshora));
                 } else {
@@ -1053,7 +1053,7 @@ public class CatalogoProductosFragment extends Fragment implements Response.List
     private int compararFechasConDate(String fecha1, String fechaActual) {
         int rst = 0;
         try {
-            /**Obtenemos las fechas enviadas en el formato a comparar*/
+            //Obtenemos las fechas enviadas en el formato a comparar
             SimpleDateFormat formateador = new SimpleDateFormat("dd/MM/yyyy");
             Date fechaDate1 = formateador.parse(fecha1);
             Date fechaDate2 = formateador.parse(fechaActual);

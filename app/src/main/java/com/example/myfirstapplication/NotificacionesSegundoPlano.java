@@ -1,6 +1,5 @@
 package com.example.myfirstapplication;
 
-import android.app.Activity;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
@@ -21,7 +20,7 @@ public class NotificacionesSegundoPlano extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        SharedPreferences preferences = context.getSharedPreferences(MainActivity.STRING_PREFERENCES, context.MODE_PRIVATE);
+        SharedPreferences preferences = context.getSharedPreferences(MainActivity.STRING_PREFERENCES, Context.MODE_PRIVATE);
         boolean p = preferences.getBoolean(MainActivity.PRIVATE_STATE_BUTTON_SESION, false);
         if(p) {
             //MainActivity.escucharNotificaciones((Activity) context, null);

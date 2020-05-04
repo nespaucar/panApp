@@ -6,118 +6,123 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".actividad.LoginFragment">
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:id="@+id/login"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="20sp">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:id="@+id/l1"
-            android:layout_centerHorizontal="true">
+            android:id="@+id/l1">
 
             <com.airbnb.lottie.LottieAnimationView
                 android:id="@+id/animation"
-                android:layout_width="172dp"
-                android:layout_height="100dp"
+                android:layout_width="172sp"
+                android:layout_height="100sp"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="22dp"
+                android:layout_marginStart="22sp"
                 app:lottie_autoPlay="true"
                 app:lottie_fileName="9997-infinity-loader.json"
-                app:lottie_loop="true" />
+                app:lottie_loop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="22sp" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/imageView2"
-                android:layout_width="172dp"
-                android:layout_height="100dp"
+                android:layout_width="172sp"
+                android:layout_height="100sp"
                 android:layout_alignParentEnd="true"
-                android:layout_marginEnd="22dp"
-                android:src="@drawable/panadero" />
+                android:layout_marginEnd="22sp"
+                android:src="@drawable/panadero"
+                android:layout_marginRight="22sp"
+                android:layout_alignParentRight="true" />
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/txtUser"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:layout_marginRight="50dp"
-                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="50sp"
+                android:layout_marginRight="50sp"
+                android:layout_marginBottom="30sp"
                 android:ems="10"
                 android:textAlignment="center"
                 android:maxLength="8"
                 android:inputType="number"
                 android:drawableLeft="@drawable/ic_account_circle_black_24dp"
                 android:hint="Usuario"
-                android:layout_below="@+id/imageView2"/>
+                android:layout_below="@+id/imageView2"
+                android:gravity="center_horizontal" />
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/txtPass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:layout_marginRight="50dp"
-                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="50sp"
+                android:layout_marginRight="50sp"
+                android:layout_marginBottom="30sp"
                 android:ems="10"
                 android:textAlignment="center"
                 android:inputType="textPassword"
                 android:drawableLeft="@drawable/ic_work_black_24dp"
                 android:hint="Contraseña"
-                android:layout_below="@+id/txtUser"/>
+                android:layout_below="@+id/txtUser"
+                android:gravity="center_horizontal" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnRecuperar"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:backgroundTint="@android:color/white"
+                android:layout_height="40sp"
+                app:backgroundTint="@android:color/white"
                 android:text="Olvidé mi contraseña"
                 style="?android:attr/borderlessButtonStyle"
                 android:textColor="#1670AB"
-                android:textSize="13dp"
+                android:textSize="13sp"
                 android:layout_below="@+id/txtPass"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnLogueo"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginLeft="100dp"
-                android:layout_marginRight="100dp"
-                android:backgroundTint="#0078A4"
+                android:layout_height="40sp"
+                android:layout_below="@+id/btnRecuperar"
+                android:layout_marginLeft="100sp"
+                android:layout_marginRight="100sp"
                 android:drawableLeft="@drawable/ic_account_box_black_24dp"
                 android:text="ACCEDER"
                 android:textColor="#ffff"
-                android:textSize="10dp"
-                android:layout_below="@+id/btnRecuperar"/>
+                android:textSize="10sp"
+                app:backgroundTint="#0078A4" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnLimpiar"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginLeft="100dp"
-                android:layout_marginRight="100dp"
-                android:textSize="10dp"
+                android:layout_height="40sp"
+                android:layout_marginLeft="100sp"
+                android:layout_marginRight="100sp"
+                android:textSize="10sp"
                 android:drawableLeft="@drawable/ic_backspace_black_24dp"
                 android:text="LIMPIAR"
                 android:textColor="#ffff"
-                android:backgroundTint="#48A400"
+                app:backgroundTint="#48A400"
                 android:layout_below="@+id/btnLogueo"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnRegistrar"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginLeft="100dp"
-                android:layout_marginRight="100dp"
-                android:textSize="10dp"
+                android:layout_height="40sp"
+                android:layout_marginLeft="100sp"
+                android:layout_marginRight="100sp"
+                android:textSize="10sp"
                 android:text="REGISTRARSE"
                 android:drawableLeft="@drawable/ic_person_add_black_24dp"
                 android:textColor="#ffff"
-                android:backgroundTint="#FB574A"
+                app:backgroundTint="#FB574A"
                 android:layout_below="@+id/btnLimpiar"/>
         </RelativeLayout>
 
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
 </RelativeLayout>

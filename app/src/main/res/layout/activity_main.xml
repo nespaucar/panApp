@@ -12,10 +12,7 @@
         layout="@layout/app_bar_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#00D64141"
-        android:backgroundTint="#00470909"
-        android:backgroundTintMode="src_atop"
-        android:foregroundTint="#00D52525" />
+        android:background="#00D64141"/>
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"

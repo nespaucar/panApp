@@ -4,8 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".actividad.actividadListaProducto">
-
-    <!-- TODO: Update blank fragment layout -->
         <ListView
             android:id="@+id/listaProducto"
             android:layout_width="match_parent"

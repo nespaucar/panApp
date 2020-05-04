@@ -57,7 +57,7 @@ public class AdapterProductosPedido
     public void onBindViewHolder(ViewHolderProductos holder, int position) {
         holder.etiNombre.setText(listaProductos.get(position).getNombre());
         holder.etiPrecio.setText("PRECIO: S/. " + listaProductos.get(position).getPrecio().toString());
-        holder.etiCantidad.setText(String.valueOf(listaProductos.get(position).getCantidad()) + " UNID.");
+        holder.etiCantidad.setText(listaProductos.get(position).getCantidad() + " UNID.");
         holder.etiSubtotal.setText("S/. " + listaProductos.get(position).getSubtotal().toString());
         holder.setOnClickListeners();
     }
@@ -146,7 +146,6 @@ public class AdapterProductosPedido
                                                 listaProductos.get(position).setCantidad(Integer.parseInt(UNIDADES));
                                                 listaProductos.get(position).setSubtotal(Float.parseFloat(SUBTOTAL));
                                                 setearTotal(true, UNIDADES, Float.parseFloat(SUBTOTAL));
-                                            } else if(respuesta.equals("2")) {
                                             }
                                         } catch (JSONException e) {
                                             e.printStackTrace();
@@ -195,7 +194,6 @@ public class AdapterProductosPedido
                                                 listaProductos.get(position).setCantidad(Integer.parseInt(UNIDADES));
                                                 listaProductos.get(position).setSubtotal(Float.parseFloat(SUBTOTAL));
                                                 setearTotal(true, UNIDADES, Float.parseFloat(SUBTOTAL));
-                                            } else if(respuesta.equals("2")) {
                                             }
                                         } catch (JSONException e) {
                                             e.printStackTrace();
@@ -241,7 +239,6 @@ public class AdapterProductosPedido
                                                 notifyItemRemoved(position);
                                                 notifyDataSetChanged();
 
-                                            } else if(respuesta.equals("2")) {
                                             }
                                         } catch (JSONException e) {
                                             e.printStackTrace();
@@ -270,10 +267,6 @@ public class AdapterProductosPedido
 
         public Boolean isOnlineNet() {
             try {
-            /*Process p = java.lang.Runtime.getRuntime().exec("ping -c 1 www.google.es");
-            int val           = p.waitFor();
-            boolean reachable = (val == 0);
-            return reachable;*/
                 ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
                 NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
 

@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import androidx.core.content.ContextCompat;
+import androidx.core.view.ViewCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -65,21 +66,13 @@ public class AdapterMiPedido extends RecyclerView.Adapter<AdapterMiPedido.ViewHo
                 break;
             case "ANULADO":
                 holder.etiEstado.setTextColor(Color.parseColor("#FF0000"));
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    holder.etiEditar.setBackgroundTintList(ContextCompat.getColorStateList(context, R.color.colorNaranjaBajo));
-                }
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    holder.etiEliminar.setBackgroundTintList(ContextCompat.getColorStateList(context, R.color.colorRojoBajo));
-                }
+                ViewCompat.setBackgroundTintList(holder.etiEditar, ContextCompat.getColorStateList(context, R.color.colorNaranjaBajo));
+                ViewCompat.setBackgroundTintList(holder.etiEliminar, ContextCompat.getColorStateList(context, R.color.colorRojoBajo));
                 break;
             case "ATENDIDO":
                 holder.etiEstado.setTextColor(Color.parseColor("#229500"));
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    holder.etiEditar.setBackgroundTintList(ContextCompat.getColorStateList(context, R.color.colorNaranjaBajo));
-                }
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    holder.etiEliminar.setBackgroundTintList(ContextCompat.getColorStateList(context, R.color.colorRojoBajo));
-                }
+                ViewCompat.setBackgroundTintList(holder.etiEditar, ContextCompat.getColorStateList(context, R.color.colorNaranjaBajo));
+                ViewCompat.setBackgroundTintList(holder.etiEliminar, ContextCompat.getColorStateList(context, R.color.colorRojoBajo));
                 break;
         }
         holder.setOnClickListeners();
@@ -192,7 +185,7 @@ public class AdapterMiPedido extends RecyclerView.Adapter<AdapterMiPedido.ViewHo
                                                     p.setCantidad(Integer.parseInt(jsonArray.getJSONObject(i).getString("cantidad")));
                                                     turnoD.setText(jsonArray.getJSONObject(i).getString("turno"));
                                                     //fechapA.setText(String.valueOf(jsonArray.getJSONObject(i).getString("fecha_atencion")));
-                                                    fechaeD.setText(String.valueOf(jsonArray.getJSONObject(i).getString("fecha_atencion")));
+                                                    fechaeD.setText(jsonArray.getJSONObject(i).getString("fecha_atencion"));
                                                     tipopagoD.setText(jsonArray.getJSONObject(i).getString("tipo_pago"));
                                                     repartidorD.setText(jsonArray.getJSONObject(i).getString("repartidor"));
                                                     comentarioD.setText(jsonArray.getJSONObject(i).getString("comentario"));
@@ -202,7 +195,6 @@ public class AdapterMiPedido extends RecyclerView.Adapter<AdapterMiPedido.ViewHo
                                                 }
                                                 adapterProductosPedidoPasado = new AdapterProductosPedidoPasado(listaDetallesPedido);
                                                 recyclerProductosPedidoPasado.setAdapter(adapterProductosPedidoPasado);
-                                            } else if (respuesta.equals("2")) {
                                             }
                                         } catch (JSONException e) {
                                             e.printStackTrace();
@@ -264,12 +256,8 @@ public class AdapterMiPedido extends RecyclerView.Adapter<AdapterMiPedido.ViewHo
                                                             //CAMBIO EL ESTADO A ANULADO
                                                             etiEstado.setText("ANULADO");
                                                             etiEstado.setTextColor(Color.parseColor("#FF0000"));
-                                                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                                                                etiEditar.setBackgroundTintList(ContextCompat.getColorStateList(context, R.color.colorNaranjaBajo));
-                                                            }
-                                                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                                                                etiEliminar.setBackgroundTintList(ContextCompat.getColorStateList(context, R.color.colorRojoBajo));
-                                                            }
+                                                            ViewCompat.setBackgroundTintList(etiEditar, ContextCompat.getColorStateList(context, R.color.colorNaranjaBajo));
+                                                            ViewCompat.setBackgroundTintList(etiEliminar, ContextCompat.getColorStateList(context, R.color.colorRojoBajo));
                                                             listaPedidos.get(position).setEstado("ANULADO");
                                                             dialogEliminar.dismiss();
                                                         } else if (respuesta.equals("2")) {
@@ -307,10 +295,6 @@ public class AdapterMiPedido extends RecyclerView.Adapter<AdapterMiPedido.ViewHo
 
         public Boolean isOnlineNet() {
             try {
-            /*Process p = java.lang.Runtime.getRuntime().exec("ping -c 1 www.google.es");
-            int val           = p.waitFor();
-            boolean reachable = (val == 0);
-            return reachable;*/
                 ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
                 NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
 

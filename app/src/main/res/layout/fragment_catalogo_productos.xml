@@ -3,43 +3,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".actividad.BienvenidoFragment">
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/menucatalogo"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:backgroundTint="@color/design_default_color_primary"
+        android:layout_height="40sp"
+        app:backgroundTint="@color/design_default_color_primary"
         android:orientation="horizontal"
         android:layout_alignParentTop="true">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="0dp"
+            android:layout_width="0sp"
             android:id="@+id/btnRegresar"
             android:layout_height="match_parent"
             android:layout_weight=".10"
-            android:textSize="13dp"
+            android:textSize="13sp"
             android:drawableBottom="@drawable/ic_arrow_back_black_24dp"
-            android:backgroundTint="#FB574A"
+            app:backgroundTint="#FB574A"
             android:textAlignment="center"
-            android:paddingStart="3dp"/>
+            android:paddingStart="3sp"
+            android:gravity="center_horizontal"
+            android:paddingLeft="3sp" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnVerCarrito"
-            android:layout_width="0dp"
+            android:layout_width="0sp"
             android:layout_height="match_parent"
             android:layout_weight=".40"
             android:text="VER CARRITO"
-            android:textSize="13dp"
+            android:textSize="13sp"
             android:textColor="@android:color/white"
             android:drawableLeft="@drawable/pedidos2"
-            android:backgroundTint="#48A400"/>
+            app:backgroundTint="#48A400"/>
 
         <androidx.appcompat.widget.AppCompatSpinner
-            android:layout_width="0dp"
+            android:layout_width="0sp"
             android:id="@+id/spinnerCategorias"
             android:layout_height="match_parent"
             android:layout_weight=".50"
-            android:backgroundTint="@color/design_default_color_primary"></androidx.appcompat.widget.AppCompatSpinner>
+            app:backgroundTint="@color/design_default_color_primary"/>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -47,9 +50,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/menucatalogo"
-        android:padding="10dp"
-        android:id="@+id/recyclerProductos">
-    </androidx.recyclerview.widget.RecyclerView>
+        android:padding="10sp"
+        android:id="@+id/recyclerProductos"/>
     <!--<ProgressBar
         android:id="@+id/progress_productos"
         android:layout_width="match_parent"

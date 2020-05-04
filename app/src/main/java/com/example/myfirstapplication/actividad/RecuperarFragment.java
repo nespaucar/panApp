@@ -106,8 +106,7 @@ public class RecuperarFragment extends Fragment {
                     String mensaje = "";
                     if(!ic_correo_recuperacion.getText().toString().equals("")) {
                         Pattern pattern = Pattern
-                                .compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
-                                        + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
+                                .compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
 
                         // El email a validar
                         Matcher mather = pattern.matcher(ic_correo_recuperacion.getText().toString());

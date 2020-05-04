@@ -273,8 +273,7 @@ public class RegistroFragment extends Fragment {
                                                     } else {
                                                         // Patrón para validar el email
                                                         Pattern pattern = Pattern
-                                                                .compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
-                                                                        + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
+                                                                .compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
 
                                                         // El email a validar
                                                         Matcher mather = pattern.matcher(correo.getText().toString());
@@ -627,10 +626,6 @@ public class RegistroFragment extends Fragment {
 
     public Boolean isOnlineNet() {
         try {
-            /*Process p = java.lang.Runtime.getRuntime().exec("ping -c 1 www.google.es");
-            int val           = p.waitFor();
-            boolean reachable = (val == 0);
-            return reachable;*/
             ConnectivityManager connectivityManager = (ConnectivityManager) getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
             NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
 

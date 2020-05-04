@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    android:layout_width="wrap_content"
+<RelativeLayout android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:padding="3dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="3sp"
     android:background="#F1F1F1"
     android:layout_gravity="center"
     android:orientation="vertical"
@@ -13,19 +13,19 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="0dp"
+            android:layout_width="0sp"
             android:layout_height="match_parent"
             android:layout_weight=".95"
             android:text="DETALLES DE PEDIDO"
             android:textStyle="bold"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textColor="#1470BD"
             android:layout_gravity="start"
-            android:backgroundTint="#BE7000"/>
+            app:backgroundTint="#BE7000"/>
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/btnCloseVer"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
             android:textColor="@android:color/black"
             android:text="X"
             android:textStyle="bold"
@@ -37,14 +37,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="10sp"
         android:layout_below="@+id/titulo2">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerProductosPedido"
             android:layout_height="@dimen/tamano_tabla"
             android:layout_gravity="center"
-            android:background="@layout/border"
+            android:background="@drawable/border"
             android:layout_width="match_parent"
             android:layout_alignParentTop="true">
         </androidx.recyclerview.widget.RecyclerView>
@@ -52,20 +52,20 @@
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:orientation="horizontal"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="10sp"
             android:layout_below="@+id/recyclerProductosPedido">
             <androidx.appcompat.widget.LinearLayoutCompat
-                android:layout_width="0dp"
+                android:layout_width="0sp"
                 android:layout_height="match_parent"
                 android:layout_weight=".3"
                 android:orientation="vertical"
-                android:layout_marginRight="8dp">
+                android:layout_marginRight="8sp">
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="TURNO/HORA"
                     android:gravity="left"
-                    android:textSize="12dp"
+                    android:textSize="12sp"
                     android:textColor="#5094BE"
                     android:textStyle="bold" />
 
@@ -73,17 +73,18 @@
                     android:id="@+id/turnoMiPedido"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="10dp"
+                    android:textSize="10sp"
                     android:gravity="center"
-                    android:padding="5dp"
-                    android:paddingEnd="0dp"
-                    android:text="-" />
+                    android:padding="5sp"
+                    android:paddingEnd="0sp"
+                    android:text="-"
+                    android:paddingRight="0sp" />
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="PROGRAMADO"
                     android:gravity="left"
-                    android:textSize="12dp"
+                    android:textSize="12sp"
                     android:textColor="#5094BE"
                     android:textStyle="bold" />
 
@@ -91,18 +92,19 @@
                     android:id="@+id/fechaprogramadaMiPedido"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="10dp"
+                    android:textSize="10sp"
                     android:gravity="center"
-                    android:padding="5dp"
-                    android:paddingEnd="0dp"
-                    android:text="-" />
+                    android:padding="5sp"
+                    android:paddingEnd="0sp"
+                    android:text="-"
+                    android:paddingRight="0sp" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="ENTREGADO"
                     android:gravity="left"
-                    android:textSize="12dp"
+                    android:textSize="12sp"
                     android:textColor="#5094BE"
                     android:textStyle="bold" />
 
@@ -110,17 +112,18 @@
                     android:id="@+id/fechaatencionMiPedido"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="10dp"
+                    android:textSize="10sp"
                     android:gravity="center"
-                    android:padding="5dp"
-                    android:paddingEnd="0dp"
-                    android:text="-" />
+                    android:padding="5sp"
+                    android:paddingEnd="0sp"
+                    android:text="-"
+                    android:paddingRight="0sp" />
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="TIPO PAGO"
                     android:gravity="left"
-                    android:textSize="12dp"
+                    android:textSize="12sp"
                     android:textColor="#5094BE"
                     android:textStyle="bold" />
 
@@ -128,24 +131,25 @@
                     android:id="@+id/tipopagoMiPedido"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="10dp"
+                    android:textSize="10sp"
                     android:gravity="center"
-                    android:padding="5dp"
-                    android:paddingEnd="0dp"
-                    android:text="-" />
+                    android:padding="5sp"
+                    android:paddingEnd="0sp"
+                    android:text="-"
+                    android:paddingRight="0sp" />
             </androidx.appcompat.widget.LinearLayoutCompat>
             <androidx.appcompat.widget.LinearLayoutCompat
-                android:layout_width="0dp"
+                android:layout_width="0sp"
                 android:layout_height="match_parent"
                 android:layout_weight=".3"
                 android:orientation="vertical"
-                android:layout_marginRight="8dp">
+                android:layout_marginRight="8sp">
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="REPARTIDOR"
                     android:gravity="left"
-                    android:textSize="12dp"
+                    android:textSize="12sp"
                     android:textColor="#50BE8E"
                     android:textStyle="bold" />
 
@@ -153,17 +157,18 @@
                     android:id="@+id/repartidorMiPedido"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="10dp"
+                    android:textSize="10sp"
                     android:gravity="center"
-                    android:padding="5dp"
-                    android:paddingEnd="0dp"
-                    android:text="-" />
+                    android:padding="5sp"
+                    android:paddingEnd="0sp"
+                    android:text="-"
+                    android:paddingRight="0sp" />
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="COMENTARIO"
                     android:gravity="left"
-                    android:textSize="12dp"
+                    android:textSize="12sp"
                     android:textColor="#50BE8E"
                     android:textStyle="bold" />
 
@@ -171,14 +176,15 @@
                     android:id="@+id/comentarioMiPedido"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="10dp"
+                    android:textSize="10sp"
                     android:gravity="center"
-                    android:padding="5dp"
-                    android:paddingEnd="0dp"
-                    android:text="-" />
+                    android:padding="5sp"
+                    android:paddingEnd="0sp"
+                    android:text="-"
+                    android:paddingRight="0sp" />
             </androidx.appcompat.widget.LinearLayoutCompat>
             <androidx.appcompat.widget.LinearLayoutCompat
-                android:layout_width="0dp"
+                android:layout_width="0sp"
                 android:layout_height="match_parent"
                 android:layout_weight=".3"
                 android:orientation="vertical">
@@ -187,7 +193,7 @@
                     android:layout_height="wrap_content"
                     android:text="ESTADO"
                     android:gravity="left"
-                    android:textSize="13dp"
+                    android:textSize="13sp"
                     android:textColor="#BE9350"
                     android:textStyle="bold"/>
                 <androidx.appcompat.widget.AppCompatTextView
@@ -196,26 +202,26 @@
                     android:layout_height="wrap_content"
                     android:text="-"
                     android:gravity="center"
-                    android:textSize="13dp"
+                    android:textSize="13sp"
                     android:textColor="#569900"
                     android:textStyle="bold"
-                    android:layout_marginBottom="10dp"/>
+                    android:layout_marginBottom="10sp"/>
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="TOTAL"
                     android:gravity="left"
-                    android:textSize="13dp"
+                    android:textSize="13sp"
                     android:textColor="#BE9350"
                     android:textStyle="bold"
-                    android:layout_marginBottom="10dp"/>
+                    android:layout_marginBottom="10sp"/>
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/totalMiPedido"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="-"
                     android:gravity="center"
-                    android:textSize="17dp"
+                    android:textSize="17sp"
                     android:textColor="#003791"
                     android:textStyle="bold" />
 

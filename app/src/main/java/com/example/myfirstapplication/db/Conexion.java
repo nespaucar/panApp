@@ -79,12 +79,8 @@ public class Conexion extends SQLiteOpenHelper {
             Cursor cursor = db.rawQuery(select, null);
             if(cursor.getCount()>0) {
                 while (cursor.moveToNext()) {
-                    //Objeto objeto = new Objeto();
-                    //int id = cursor.getInt(cursor.getColumnIndex("id"));
                     //String codigo = cursor.getString(cursor.getColumnIndex("codigo"));
-                    String codigo = cursor.getString(cursor.getColumnIndex("codigo"));
                     String nombre = cursor.getString(cursor.getColumnIndex("nombre"));
-                    //lista.add(codigo + " => " + nombre);
                     lista.add(nombre);
                 }
             }
