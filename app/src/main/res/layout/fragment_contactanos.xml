@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".actividad.ContactanosFragment">
+
+    <RelativeLayout
+        android:gravity="center"
+        android:padding="5sp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/i0"
+            android:padding="6sp"
+            android:gravity="center"
+            android:textColor="#FE0F00"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Dirección:" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/i2"
+            android:padding="6sp"
+            android:layout_below="@id/i0"
+            android:layout_marginBottom="20sp"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textColor="@color/quantum_black_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Av. Víctor Andrés García Belaunde #480 Urb. El Ingeniero I" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/i3"
+            android:padding="6sp"
+            android:textColor="#FE0F00"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:layout_below="@id/i2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Teléfono fijo:" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/i4"
+            android:layout_below="@id/i3"
+            android:padding="6sp"
+            android:textSize="14sp"
+            android:layout_marginBottom="20sp"
+            android:gravity="center"
+            android:textColor="@color/quantum_black_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="(74) 255782" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/i5"
+            android:padding="6sp"
+            android:textColor="#FE0F00"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:layout_below="@id/i4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Celular:" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/i6"
+            android:textColor="@color/quantum_black_text"
+            android:padding="10sp"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:layout_below="@id/i5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="995191050"/>
+    </RelativeLayout>
+
+
+</androidx.core.widget.NestedScrollView>

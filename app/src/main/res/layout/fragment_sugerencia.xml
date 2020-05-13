@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".actividad.SugerenciaFragment">
+
+    <RelativeLayout
+        android:gravity="center"
+        android:padding="5sp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/i1"
+            android:padding="20sp"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textColor="@color/quantum_black_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Por favor, déjanos tus sugerencias o reclamo para mejorar la calidad de nuestros productos y servicio." />
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/i2"
+            android:inputType="textMultiLine"
+            android:lines="4"
+            android:maxLength="100"
+            android:layout_below="@+id/i1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:layout_marginBottom="10sp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnEnviar"
+            android:layout_below="@+id/i2"
+            android:drawableLeft="@drawable/ic_menu_send"
+            app:backgroundTint="@color/quantum_googred"
+            android:text="ENVIAR"
+            android:textColor="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20sp"/>
+    </RelativeLayout>
+
+
+</androidx.core.widget.NestedScrollView>

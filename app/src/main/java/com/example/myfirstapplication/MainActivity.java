@@ -31,7 +31,11 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.example.myfirstapplication.actividad.CalificarWebFragment;
+import com.example.myfirstapplication.actividad.ContactanosFragment;
+import com.example.myfirstapplication.actividad.InformacionFragment;
+import com.example.myfirstapplication.actividad.ProductosFragment;
 import com.example.myfirstapplication.actividad.RecuperarFragment;
+import com.example.myfirstapplication.actividad.SugerenciaFragment;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -86,7 +90,11 @@ public class MainActivity extends AppCompatActivity
         BienvenidoFragment.OnFragmentInteractionListener,
         CatalogoProductosFragment.OnFragmentInteractionListener,
         MisPedidosFragment.OnFragmentInteractionListener,
-        RecuperarFragment.OnFragmentInteractionListener {
+        RecuperarFragment.OnFragmentInteractionListener,
+        InformacionFragment.OnFragmentInteractionListener,
+        ProductosFragment.OnFragmentInteractionListener,
+        ContactanosFragment.OnFragmentInteractionListener,
+        SugerenciaFragment.OnFragmentInteractionListener {
 
     private actividadProducto vistaproducto;
     private actividadCategoria vistacategoria;
@@ -97,6 +105,10 @@ public class MainActivity extends AppCompatActivity
     private BienvenidoFragment vistabienvenido;
     private RecuperarFragment vistarecuperar;
     private CatalogoProductosFragment vistacatalogoproductos;
+    private InformacionFragment vistainformacionFragment;
+    private ProductosFragment vistaproductosFragment;
+    private ContactanosFragment vistacontactanosFragment;
+    private SugerenciaFragment vistasugerenciaFragment;
 
     private actividadListaProducto vistalistaproducto;
     private actividadListaCategoria vistalistacategoria;
@@ -117,6 +129,8 @@ public class MainActivity extends AppCompatActivity
 
     public static final String STRING_PREFERENCES = "PANAPP.NESTOR.PAUCAR";
     public static final String PRIVATE_STATE_BUTTON_SESION = "ESTADO.NESTOR.PAUCAR";
+
+    public int pactive = 1;
 
     @SuppressLint("RestrictedApi")
     @Override
@@ -162,6 +176,10 @@ public class MainActivity extends AppCompatActivity
         vistaunidad = new actividadUnidad();
 
         vistacatalogoproductos = new CatalogoProductosFragment();
+        vistainformacionFragment = new InformacionFragment();
+        vistaproductosFragment = new ProductosFragment();
+        vistacontactanosFragment = new ContactanosFragment();
+        vistasugerenciaFragment = new SugerenciaFragment();
 
         sgetActivity = vistalogin.getActivity();
 
@@ -235,21 +253,31 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
-
-        if(!item.isChecked()) {
-            if (id == R.id.nav_inicio) {
-                cambioFragment(vistaregistro, "MODIFICAR DATOS");
-            } else if (id == R.id.nav_inicio2) {
-                cambioFragment(vistaregistro, "MODIFICAR DATOS");
-            } else if (id == R.id.nav_inicio3) {
-                cambioFragment(vistaregistro, "MODIFICAR DATOS");
-            } else if (id == R.id.nav_inicio4) {
-                cambioFragment(vistaregistro, "MODIFICAR DATOS");
-            } else if (id == R.id.nav_inicio5) {
-                cambioFragment(vistaregistro, "MODIFICAR DATOS");
+        if(pactive != id) {
+            if(!item.isChecked()) {
+                if(id == R.id.nav_start) {
+                    cambioFragment(vistabienvenido, "BIENVENIDO");
+                    pactive = R.id.nav_start;
+                } else if (id == R.id.nav_inicio) {
+                    cambioFragment(vistainformacionFragment, "SOBRE NOSOTROS");
+                    pactive = R.id.nav_inicio;
+                } else if (id == R.id.nav_inicio2) {
+                    cambioFragment(vistasugerenciaFragment, "SUGERENCIA/RECLAMO");
+                    pactive = R.id.nav_inicio2;
+                } else if (id == R.id.nav_inicio3) {
+                    cambioFragment(vistaproductosFragment, "PRODUCTOS");
+                    pactive = R.id.nav_inicio3;
+                } else if (id == R.id.nav_inicio4) {
+                    cambioFragment(vistacontactanosFragment, "CONTÁCTANOS");
+                    pactive = R.id.nav_inicio4;
+                } else if (id == R.id.nav_inicio5) {
+                    cambioFragment(vistaregistro, "MODIFICAR DATOS");
+                    pactive = R.id.nav_inicio5;
+                }
+                item.setCheckable(false);
             }
-            item.setCheckable(false);
         }
+
         /*if (id == R.id.nav_inicio) {
             cambioFragment(vistabienvenido, "BIENVENIDO");
             campoHide.setText("1");

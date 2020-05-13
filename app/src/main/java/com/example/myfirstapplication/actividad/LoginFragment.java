@@ -160,19 +160,17 @@ public class LoginFragment extends Fragment {
                                                 m.guardarEstadoSesion(getContext(), true, Integer.parseInt(respuesta_id), respuesta_nombre, Integer.parseInt(respuesta_idpedido), respuesta_tipousuario);
                                                 nombrecabecera.setText(respuesta_nombre);
                                                 //OCULTAMOS EL TECLADO
-
                                                 UIUtil.hideKeyboard(getActivity());
-
-                                                //
                                                 cambioFragment(vistabienvenido, "BIENVENIDO", container, inflater);
                                                 navigationView.getMenu().setGroupVisible(R.id.items_nav, true);
-                                                mostrarToast("INICIASTE SESIÓN");
+                                                mostrarToast("BIENVENIDO");
                                                 progress.dismiss();
-                                                //Toast.makeText(getActivity().getApplication(), "INICIASTE SESIÓN", Toast.LENGTH_SHORT).show();
-                                            } else {
-                                                mostrarToast("NO SE ENCUENTRA EN LA BASE DE DATOS");
+                                            } else if(respuesta.equals("2")) {
+                                                mostrarToast("EL DNI O LA CONTRASEÑA ES INCORRECTA");
                                                 progress.dismiss();
-                                                //Toast.makeText(getActivity().getApplication(), "NO SE ENCUENTRA EN LA BASE DE DATOS", Toast.LENGTH_SHORT).show();
+                                            } else if(respuesta.equals("3")) {
+                                                mostrarToast("EL USUARIO HA SIDO DESHABILITADO");
+                                                progress.dismiss();
                                             }
                                         } catch (JSONException e) {
                                             e.printStackTrace();
@@ -185,6 +183,7 @@ public class LoginFragment extends Fragment {
                             @Override
                             public void onErrorResponse(VolleyError error) {
                                 mostrarToast("NO TE ENCUENTRAS CONECTADO AL SERVIDOR");
+                                Log.d("[asno]", error.getMessage());
                                 progress.dismiss();
                                 //Toast.makeText(getActivity().getApplication(), "NO TE ENCUENTRAS CONECTADO AL SERVIDOR", Toast.LENGTH_SHORT).show();
                             }

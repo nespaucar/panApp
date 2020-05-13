@@ -7,17 +7,21 @@
         android:id="@+id/items_nav"
         android:checkableBehavior="single">
         <item
+            android:id="@+id/nav_start"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Inicio"/>
+        <item
             android:id="@+id/nav_inicio"
             android:icon="@drawable/user"
             android:title="Información Personal"/>
         <item
-            android:id="@+id/nav_inicio2"
-            android:icon="@drawable/ic_remove_red_eye_black_24dp"
-            android:title="Conócenos"/>
-        <item
             android:id="@+id/nav_inicio3"
             android:icon="@drawable/ic_catalogo"
             android:title="Productos"/>
+        <item
+            android:id="@+id/nav_inicio2"
+            android:icon="@drawable/ic_remove_red_eye_black_24dp"
+            android:title="Sugerencia/Reclamo"/>
         <item
             android:id="@+id/nav_inicio4"
             android:icon="@drawable/ic_phone"

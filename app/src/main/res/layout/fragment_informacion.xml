@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".actividad.InformacionFragment">
+
+    <RelativeLayout
+        android:gravity="center"
+        android:padding="5sp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/i2"
+            android:padding="6sp"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textColor="@color/quantum_black_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Panadería Mishka nació a finales del año 2009 como una propuesta alternativa a la escasez de locales panaderos en la zona. Su fundadora, doña Nancy Corrales Tafur, vio esto como una oportunidad para poner en práctica los años de experiencia en el rubro y así también cumplir un deseo personal: el negocio propio." />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/i3"
+            android:gravity="center"
+            android:padding="6sp"
+            android:textColor="#FE0F00"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_below="@id/i2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="MISIÓN" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/i4"
+            android:layout_below="@id/i3"
+            android:padding="6sp"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textColor="@color/quantum_black_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Somos una empresa dedica a la elaboración de productos de panadería y pastelería comprometidos con nuestros clientes en brindarles productos de gran calidad y sabor con un servicio amable y oportuno." />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/i5"
+            android:gravity="center"
+            android:padding="6sp"
+            android:textColor="#FE0F00"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_below="@id/i4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="VISIÓN" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/i6"
+            android:textColor="@color/quantum_black_text"
+            android:padding="10sp"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:layout_below="@id/i5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Ser una de las mejores panaderías ofreciendo lo mejor que tenemos para nuestros clientes, ofreciendo esfuerzo, honestidad y responsabilidad junto con trabajadores comprometidos en elaborar productos de calidad." />
+    </RelativeLayout>
+
+
+</androidx.core.widget.NestedScrollView>

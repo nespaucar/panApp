@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".actividad.ProductosFragment">
+
+    <RelativeLayout
+        android:gravity="center"
+        android:padding="5sp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/i2"
+            android:padding="6sp"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textColor="@color/quantum_black_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Nos mueve la pasión por lo dulce, el placer de compartir tus mejores momentos con nuestra gran selección de tortas, postres y dulces. A continuación te recomendamos algunas de nuestras especialidades que siempre están disponibles, pero sin duda, puedes consultarnos cualquier encargo especial, ya sea para una celebración o banquete, estaremos encantados de personalizar cualquier pedido para ti." />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/i3"
+            android:padding="6sp"
+            android:textColor="#FE0F00"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_below="@id/i2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Postres/Dulces" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/i4"
+            android:layout_below="@id/i3"
+            android:padding="6sp"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textColor="@color/quantum_black_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Pionono, alfajor, torta helada, turrón, budín, mazamorra morada, coquitos, suspiro, arroz con leche, cocadas, arroz zambito, chocotejas, rosquitas cajamarquinas." />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/i5"
+            android:padding="6sp"
+            android:textColor="#FE0F00"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_below="@id/i4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Panadería" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/i6"
+            android:textColor="@color/quantum_black_text"
+            android:padding="10sp"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:layout_below="@id/i5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Pan francés, pan semita, pan de yema, pan centeno, pan chancay, pan cachanga, pan baguette, etc."/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/i7"
+            android:textColor="@color/quantum_black_text"
+            android:padding="10sp"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:layout_below="@id/i6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Así también ofrecemos productos de primera necesidad como pan envasado, embutidos, gaseosas, entre otros."/>
+    </RelativeLayout>
+
+
+</androidx.core.widget.NestedScrollView>
