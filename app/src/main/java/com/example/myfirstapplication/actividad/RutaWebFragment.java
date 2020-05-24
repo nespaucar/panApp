@@ -9,13 +9,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.TextView;
 
 import com.example.myfirstapplication.MainActivity;
 import com.example.myfirstapplication.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class RutaWebFragment extends Fragment {
 
     WebView web;
+    FloatingActionButton btnVolver, btnEditarDatos;
 
     public RutaWebFragment() {
         // Required empty public constructor
@@ -38,6 +41,19 @@ public class RutaWebFragment extends Fragment {
 
         web = (WebView) view.findViewById(R.id.web_ruta);
         web.getSettings().setJavaScriptEnabled(true);
+
+        btnEditarDatos = (FloatingActionButton) getActivity().findViewById(R.id.btnEditarUsuario);
+        btnEditarDatos.setVisibility(View.GONE);
+
+        btnVolver = (FloatingActionButton) view.findViewById(R.id.btnVolver);
+
+        btnVolver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cambioFragment(new BienvenidoFragment(), "BIENVENIDO");
+            }
+        });
+
         web.loadUrl("http://martinampuero.com/sigre/SimularRecorrido.php?idrepartidor=" + MainActivity.obtenerIdUsuarioEstadoSesionStatic(getContext()));
 
         web.setWebViewClient(new WebViewClient() {
@@ -46,5 +62,23 @@ public class RutaWebFragment extends Fragment {
             }
         });
         return view;
+    }
+
+    public void cambioFragment(Fragment object, String cabecera) {
+        TextView idcabecera = (TextView) getActivity().findViewById(R.id.idcabecera);
+
+        //CAMBIO DE FRAGMENT
+
+        if (getActivity().getSupportFragmentManager().findFragmentById(R.id.contenedordinamico) != null) {
+            getActivity().getSupportFragmentManager()
+                    .beginTransaction().
+                    remove(getActivity().getSupportFragmentManager().findFragmentById(R.id.contenedordinamico)).commit();
+        }
+        getActivity().getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.contenedordinamico, object)
+                .commit();
+
+        idcabecera.setText(cabecera);
     }
 }
