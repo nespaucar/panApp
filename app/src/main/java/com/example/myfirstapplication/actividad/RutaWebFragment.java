@@ -54,7 +54,7 @@ public class RutaWebFragment extends Fragment {
             }
         });
 
-        web.loadUrl("http://martinampuero.com/sigre/SimularRecorrido.php?idrepartidor=" + MainActivity.obtenerIdUsuarioEstadoSesionStatic(getContext()));
+        web.loadUrl("http://martinampuero.com/sigre/SimularRecorrido.php?idrepartidor=" + MainActivity.obtenerIdUsuarioEstadoSesionStatic(getContext()) + "&hora=6");
 
         web.setWebViewClient(new WebViewClient() {
             public boolean shouldOverriceUrlLoading(WebView webView, String url) {
