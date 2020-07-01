@@ -36,7 +36,7 @@ public class CalificarWebFragment extends Fragment {
         web = (WebView) view.findViewById(R.id.web_calificar);
         volver = (FloatingActionButton) view.findViewById(R.id.volver);
         web.getSettings().setJavaScriptEnabled(true);
-        web.loadUrl("http://martinampuero.com/sigre/calificaciones.php?id_usuario=" + MainActivity.obtenerIdUsuarioEstadoSesionStatic(getContext()));
+        web.loadUrl("http://161.35.122.212/sigre/calificaciones.php?id_usuario=" + MainActivity.obtenerIdUsuarioEstadoSesionStatic(getContext()));
 
         web.setWebViewClient(new WebViewClient() {
             public boolean shouldOverriceUrlLoading(WebView webView, String url) {

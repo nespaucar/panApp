@@ -397,7 +397,7 @@ public class MainActivity extends AppCompatActivity
 
     public static void escucharNotificaciones(final Context context, RequestQueue requestQueue, SharedPreferences preferences) {
         final int user_id = preferences.getInt("id_usuario", 0);
-        String URL = "http://martinampuero.com/sigre/controlador/Cpedido.php";
+        String URL = "http://161.35.122.212/sigre/controlador/Cpedido.php";
         StringRequest stringRequest = new StringRequest(Request.Method.POST, URL,
                 new Response.Listener<String>() {
                     @Override

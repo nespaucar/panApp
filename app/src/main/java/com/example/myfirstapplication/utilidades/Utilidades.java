@@ -62,10 +62,11 @@ public class Utilidades {
 
     public static final String WHERE = " WHERE id = ";
 
-    public static final String WEB_SERVICE = "http://martinampuero.com/sigre/controlador/Cservice.php";
+    //public static final String WEB_SERVICE = "http://martinampuero.com/sigre/controlador/Cservice.php";
+    public static final String WEB_SERVICE = "http://161.35.122.212/sigre/controlador/Cservice.php";
     //public static final String WEB_SERVICE = "http://192.168.1.5/sigre/controlador/Cservice.php";
 
-    public static final String WEB_IMAGEN_PRODUCTO = "http://martinampuero.com/sigre/";
+    public static final String WEB_IMAGEN_PRODUCTO = "http://161.35.122.212/sigre/";
     //public static final String WEB_IMAGEN_PRODUCTO = "http://192.168.1.5/sigre/";
 
     public static final String WS_INSERTAR = WEB_SERVICE + "?action=agregar";
