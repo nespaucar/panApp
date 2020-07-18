@@ -5,33 +5,16 @@
     <string name="nav_header_title">Panadería Mishka</string>
     <string name="nav_header_subtitle">Celular: 995191050</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Categoria</string>
-    <string name="menu_gallery">Marca</string>
-    <string name="menu_slideshow">Unidad</string>
-    <string name="menu_tools">Producto</string>
-    <string name="menu_share">Share</string>
-    <string name="menu_send">Send</string>
     <string name="registrar">GUARDAR</string>
-    <string name="nombre">Nombre</string>
-    <string name="marca">Marca</string>
-    <string name="unidad">Unidad</string>
-    <string name="categoria">Categoria</string>
-    <string name="button2">Button</string>
-    <string name="button3">Button</string>
-    <string name="textogrande"><b>BIENVENIDO</b></string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="ingrese_nombre">Nombre</string>
     <string name="ingrese_codigo">Código</string>
     <string name="ingrese_precio">Precio</string>
     <string name="seleccione_categoria">Categoría</string>
     <string name="seleccione_marca">Marca</string>
     <string name="seleccione_unidad">Unidad</string>
-    <string name="contenedordinamico">contenedor</string>
-    <string name="idcabecera">idcabecera</string>
 
     <!-- ARRAYS PARA LOS SPINNERS -->
 

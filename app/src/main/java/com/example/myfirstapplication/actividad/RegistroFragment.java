@@ -56,6 +56,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
@@ -225,63 +226,101 @@ public class RegistroFragment extends Fragment {
                 progress.show();
                 if(isOnlineNet()) {
                     requestQueue = Volley.newRequestQueue(getContext());
-                    String mensaje = "";
                     boolean enviar = true;
                     if(nombres.getText().toString().equals("")) {
                         mostrarToast("INGRESA TU NOMBRE");
                         nombres.requestFocus();
                         enviar=false;
                     } else {
-                        if(dni.getText().toString().equals("")) {
-                            mostrarToast("INGRESA TU DNI");
-                            dni.requestFocus();
+                        if(nombres.getText().toString().length() < 5) {
+                            mostrarToast("EL NOMBRE DEBE TENER ENTRE 5 Y 25 CARACTERES");
+                            nombres.requestFocus();
                             enviar=false;
                         } else {
-                            if(fechaNacimiento.getText().toString().equals("")) {
-                                mostrarToast("INGRESA TU FECHA DE NACIMIENTO");
-                                correo.requestFocus();
+                            if(dni.getText().toString().equals("")) {
+                                mostrarToast("INGRESA TU DNI");
+                                dni.requestFocus();
                                 enviar=false;
                             } else {
-                                if(usuario.getText().toString().equals("")) {
-                                    mostrarToast("INGRESA TU USUARIO");
-                                    usuario.requestFocus();
+                                if(dni.getText().toString().length() < 8) {
+                                    mostrarToast("EL DNI DEBE TENER 8 CARACTERES");
+                                    dni.requestFocus();
                                     enviar=false;
                                 } else {
-                                    if(password.getText().toString().equals("")) {
-                                        mostrarToast("INGRESA TU CLAVE");
-                                        password.requestFocus();
+                                    if(fechaNacimiento.getText().toString().equals("")) {
+                                        mostrarToast("INGRESA TU FECHA DE NACIMIENTO");
                                         enviar=false;
                                     } else {
-                                        if(direccion.getText().toString().equals("")) {
-                                            mostrarToast("INGRESA TU DIRECCIÓN");
-                                            direccion.requestFocus();
+                                        if(!compareDates15Before()) {
+                                            mostrarToast("DEBES TENER AL MENOS 15 AÑOS");
                                             enviar=false;
                                         } else {
-                                            if(referencia.getText().toString().equals("")) {
-                                                mostrarToast("INGRESA TU REFERENCIA");
-                                                referencia.requestFocus();
+                                            if(usuario.getText().toString().equals("")) {
+                                                mostrarToast("INGRESA TU USUARIO");
+                                                usuario.requestFocus();
                                                 enviar=false;
                                             } else {
-                                                if(celular.getText().toString().equals("")) {
-                                                    mostrarToast("INGRESA TU CELULAR");
-                                                    celular.requestFocus();enviar=false;
+                                                if(password.getText().toString().equals("")) {
+                                                    mostrarToast("INGRESA TU CLAVE");
+                                                    password.requestFocus();
+                                                    enviar=false;
                                                 } else {
-                                                    if (correo.getText().toString().equals("")) {
-                                                        mostrarToast("INGRESA TU CORREO");
-                                                        correo.requestFocus();
-                                                        enviar = false;
+                                                    if(password.getText().toString().length() < 8) {
+                                                        mostrarToast("TU CLAVE DEBE TENER ENTRE 8 Y 15 CARACTERES");
+                                                        password.requestFocus();
+                                                        enviar=false;
                                                     } else {
-                                                        // Patrón para validar el email
-                                                        Pattern pattern = Pattern
-                                                                .compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
+                                                        if(direccion.getText().toString().equals("")) {
+                                                            mostrarToast("INGRESA TU DIRECCIÓN");
+                                                            direccion.requestFocus();
+                                                            enviar=false;
+                                                        } else {
+                                                            if(direccion.getText().toString().length() < 5) {
+                                                                mostrarToast("TU DIRECCIÓN DEBE TENER DE 5 A 25 CARACTERES");
+                                                                direccion.requestFocus();
+                                                                enviar=false;
+                                                            } else {
+                                                                if(referencia.getText().toString().equals("")) {
+                                                                    mostrarToast("INGRESA TU REFERENCIA");
+                                                                    referencia.requestFocus();
+                                                                    enviar=false;
+                                                                } else {
+                                                                    if(referencia.getText().toString().length()<5) {
+                                                                        mostrarToast("TU DIRECCIÓN DEBE TENER DE 5 A 25 CARACTERES");
+                                                                        referencia.requestFocus();
+                                                                        enviar=false;
+                                                                    } else {
+                                                                        if(celular.getText().toString().equals("")) {
+                                                                            mostrarToast("INGRESA TU CELULAR");
+                                                                            celular.requestFocus();enviar=false;
+                                                                        } else {
+                                                                            if(celular.getText().toString().length()<6) {
+                                                                                mostrarToast("TU CELULAR DEBE TENER DE 6 A 9 CARACTERES");
+                                                                                celular.requestFocus();enviar=false;
+                                                                            } else {
+                                                                                if (correo.getText().toString().equals("")) {
+                                                                                    mostrarToast("INGRESA TU CORREO");
+                                                                                    correo.requestFocus();
+                                                                                    enviar = false;
+                                                                                } else {
+                                                                                    // Patrón para validar el email
+                                                                                    Pattern pattern = Pattern
+                                                                                            .compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
 
-                                                        // El email a validar
-                                                        Matcher mather = pattern.matcher(correo.getText().toString());
+                                                                                    // El email a validar
+                                                                                    Matcher mather = pattern.matcher(correo.getText().toString());
 
-                                                        if (!mather.find()) {
-                                                            mostrarToast("CORREO INVÁLIDO");
-                                                            correo.requestFocus();
-                                                            enviar = false;
+                                                                                    if (!mather.find()) {
+                                                                                        mostrarToast("CORREO INVÁLIDO");
+                                                                                        correo.requestFocus();
+                                                                                        enviar = false;
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
                                                         }
                                                     }
                                                 }
@@ -417,6 +456,15 @@ public class RegistroFragment extends Fragment {
         return view;
     }
 
+    private boolean compareDates15Before() {
+        SimpleDateFormat currentDate = new SimpleDateFormat("yyyy", Locale.getDefault());
+        String currentYear = currentDate.format(new Date());
+        if((Integer.parseInt(currentYear) - Integer.parseInt(anno)) >= 15) {
+            return true;
+        }
+        return false;
+    }
+
     private void llenarDatosEditarUsuario() {
         {
             String URL_REGISTRO = Utilidades.WEB_SERVICE + "?accion=DATOS_USUARIO";
@@ -491,9 +539,9 @@ public class RegistroFragment extends Fragment {
 
     private void setearFecha(String tipo, String dia2, String mes2, String anno2) {
         if (tipo.equals("1")) {
-            SimpleDateFormat dateFormatDia = new SimpleDateFormat("dd", Locale.ENGLISH);
-            SimpleDateFormat dateFormatMes = new SimpleDateFormat("MM", Locale.ENGLISH);
-            SimpleDateFormat dateFormatAnno = new SimpleDateFormat("yyyy", Locale.ENGLISH);
+            SimpleDateFormat dateFormatDia = new SimpleDateFormat("dd", Locale.getDefault());
+            SimpleDateFormat dateFormatMes = new SimpleDateFormat("MM", Locale.getDefault());
+            SimpleDateFormat dateFormatAnno = new SimpleDateFormat("yyyy", Locale.getDefault());
             anno = dateFormatAnno.format(new Date());
             mes = dateFormatMes.format(new Date());
             dia = dateFormatDia.format(new Date());

@@ -7,7 +7,6 @@
     tools:context=".actividad.BienvenidoFragment">
 
     <RelativeLayout
-        android:id="@+id/bienvenido"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -19,7 +18,6 @@
             android:orientation="horizontal">
 
             <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/animation2"
                 android:layout_width="172sp"
                 android:layout_height="match_parent"
                 android:layout_alignParentStart="true"
@@ -30,7 +28,6 @@
                 android:layout_alignParentLeft="true"
                 android:layout_marginLeft="22sp" />
             <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/animation3"
                 android:layout_width="172sp"
                 android:layout_height="match_parent"
                 android:layout_alignParentEnd="true"
@@ -43,7 +40,6 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/bienvenidobotones"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"

@@ -61,7 +61,6 @@
             android:layout_height="match_parent"
             android:text="Pan francés, pan semita, pan de yema, pan centeno, pan chancay, pan cachanga, pan baguette, etc."/>
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/i7"
             android:textColor="@color/quantum_black_text"
             android:padding="10sp"
             android:gravity="center"

@@ -14,7 +14,6 @@
     app:backgroundTint="#3F51B5">
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/imageView"
         android:layout_width="90sp"
         android:layout_height="90sp"
         android:contentDescription="@string/nav_header_desc"
@@ -29,7 +28,6 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/nav_header_subtitle" />

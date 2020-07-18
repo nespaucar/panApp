@@ -28,7 +28,6 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:textColor="@android:color/white"
-            android:id="@+id/mensajetexttoast"
             android:text="MENSAJE:"/>
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"

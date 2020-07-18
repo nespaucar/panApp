@@ -620,9 +620,9 @@ public class MisPedidosFragment extends Fragment {
 
     private void setearFecha(String tipo, String dia2_, String mes2_, String anno2_) {
         if (tipo.equals("1")) {
-            SimpleDateFormat dateFormatDia = new SimpleDateFormat("dd", Locale.ENGLISH);
-            SimpleDateFormat dateFormatMes = new SimpleDateFormat("MM", Locale.ENGLISH);
-            SimpleDateFormat dateFormatAnno = new SimpleDateFormat("yyyy", Locale.ENGLISH);
+            SimpleDateFormat dateFormatDia = new SimpleDateFormat("dd", Locale.getDefault());
+            SimpleDateFormat dateFormatMes = new SimpleDateFormat("MM", Locale.getDefault());
+            SimpleDateFormat dateFormatAnno = new SimpleDateFormat("yyyy", Locale.getDefault());
             anno = dateFormatAnno.format(new Date());
             mes = dateFormatMes.format(new Date());
             dia = dateFormatDia.format(new Date());
@@ -661,9 +661,9 @@ public class MisPedidosFragment extends Fragment {
 
     private void setearFecha2(String tipo, String dia_2, String mes_2, String anno_2) {
         if (tipo.equals("1")) {
-            SimpleDateFormat dateFormatDia = new SimpleDateFormat("dd", Locale.ENGLISH);
-            SimpleDateFormat dateFormatMes = new SimpleDateFormat("MM", Locale.ENGLISH);
-            SimpleDateFormat dateFormatAnno = new SimpleDateFormat("yyyy", Locale.ENGLISH);
+            SimpleDateFormat dateFormatDia = new SimpleDateFormat("dd", Locale.getDefault());
+            SimpleDateFormat dateFormatMes = new SimpleDateFormat("MM", Locale.getDefault());
+            SimpleDateFormat dateFormatAnno = new SimpleDateFormat("yyyy", Locale.getDefault());
             anno2 = dateFormatAnno.format(new Date());
             mes2 = dateFormatMes.format(new Date());
             dia2 = dateFormatDia.format(new Date());
@@ -700,9 +700,9 @@ public class MisPedidosFragment extends Fragment {
 
     private void setearFecha3(String tipo, String dia_2, String mes_2, String anno_2) {
         if (tipo.equals("1")) {
-            SimpleDateFormat dateFormatDia = new SimpleDateFormat("dd", Locale.ENGLISH);
-            SimpleDateFormat dateFormatMes = new SimpleDateFormat("MM", Locale.ENGLISH);
-            SimpleDateFormat dateFormatAnno = new SimpleDateFormat("yyyy", Locale.ENGLISH);
+            SimpleDateFormat dateFormatDia = new SimpleDateFormat("dd", Locale.getDefault());
+            SimpleDateFormat dateFormatMes = new SimpleDateFormat("MM", Locale.getDefault());
+            SimpleDateFormat dateFormatAnno = new SimpleDateFormat("yyyy", Locale.getDefault());
             anno3 = dateFormatAnno.format(new Date());
             mes3 = dateFormatMes.format(new Date());
             dia3 = dateFormatDia.format(new Date());

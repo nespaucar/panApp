@@ -212,6 +212,7 @@
                 android:id="@+id/c_direccion"
                 android:layout_height="match_parent"
                 android:textAlignment="center"
+                android:digits="ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyzáéíóúÁÉÍÓÚ1234567890 "
                 android:inputType="text|textMultiLine"
                 android:textSize="12sp"
                 android:layout_gravity="center"/>
@@ -241,6 +242,7 @@
                 android:id="@+id/c_referencia"
                 android:layout_height="match_parent"
                 android:textAlignment="center"
+                android:digits="ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyzáéíóúÁÉÍÓÚ1234567890 "
                 android:inputType="text"
                 android:textSize="12sp"
                 android:gravity="center_horizontal" />

@@ -7,7 +7,6 @@
     tools:context=".actividad.LoginFragment">
 
     <androidx.core.widget.NestedScrollView
-        android:id="@+id/login"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -16,11 +15,9 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:id="@+id/l1">
+            android:orientation="horizontal">
 
             <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/animation"
                 android:layout_width="172sp"
                 android:layout_height="100sp"
                 android:layout_alignParentStart="true"
@@ -65,6 +62,7 @@
                 android:layout_marginRight="50sp"
                 android:layout_marginBottom="30sp"
                 android:ems="10"
+                android:maxLength="15"
                 android:textAlignment="center"
                 android:inputType="textPassword"
                 android:drawableLeft="@drawable/ic_work_black_24dp"
